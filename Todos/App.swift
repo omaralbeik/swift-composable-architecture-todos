@@ -4,9 +4,10 @@ import SwiftUI
 @main
 struct TodosApp: App {
   let store = Store(
-    storeKey: "todos",
+    cache: DocumentsCache(key: "todos"),
+    ignoreCachingDuplicates: { $0.todos == $1.todos },
     initialState: TodosState(),
-    reducer: todosReducer,
+    reducer: todosReducer.debug(),
     environment: TodosEnvironment(
       scheduler: .main,
       uuid: UUID.init

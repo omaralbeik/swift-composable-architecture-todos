@@ -30,7 +30,6 @@ struct TodosState: Equatable, Codable {
   }
 
   enum CodingKeys: String, CodingKey {
-    case filter
     case todos
   }
 }

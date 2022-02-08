@@ -20,6 +20,7 @@
 		07C6EC5B27B16FEF00F9F248 /* TodoLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6EC5A27B16FEF00F9F248 /* TodoLogic.swift */; };
 		07C6EC5E27B1705700F9F248 /* TodosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6EC5D27B1705700F9F248 /* TodosModel.swift */; };
 		07C6EC6027B1709500F9F248 /* TodosLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6EC5F27B1709500F9F248 /* TodosLogic.swift */; };
+		07E8336127B2840100961D74 /* CachingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8336027B2840100961D74 /* CachingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		07C6EC5A27B16FEF00F9F248 /* TodoLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoLogic.swift; sourceTree = "<group>"; };
 		07C6EC5D27B1705700F9F248 /* TodosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosModel.swift; sourceTree = "<group>"; };
 		07C6EC5F27B1709500F9F248 /* TodosLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosLogic.swift; sourceTree = "<group>"; };
+		07E8336027B2840100961D74 /* CachingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				0767E36D27ADDFA800E01463 /* TodosTests.swift */,
+				07E8336027B2840100961D74 /* CachingTests.swift */,
 			);
 			path = TodosTests;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0767E36E27ADDFA800E01463 /* TodosTests.swift in Sources */,
+				07E8336127B2840100961D74 /* CachingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
