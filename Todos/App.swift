@@ -4,6 +4,7 @@ import SwiftUI
 @main
 struct TodosApp: App {
   let store = Store(
+    storeKey: "todos",
     initialState: TodosState(),
     reducer: todosReducer,
     environment: TodosEnvironment(
@@ -11,6 +12,7 @@ struct TodosApp: App {
       uuid: UUID.init
     )
   )
+
   var body: some Scene {
     WindowGroup {
       TodosView(store: store)

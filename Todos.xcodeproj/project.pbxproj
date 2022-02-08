@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0715044127B1EE0F002D2306 /* Store+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715044027B1EE0F002D2306 /* Store+Caching.swift */; };
 		0767E35D27ADDFA700E01463 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767E35C27ADDFA700E01463 /* App.swift */; };
 		0767E36127ADDFA800E01463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0767E36027ADDFA800E01463 /* Assets.xcassets */; };
 		0767E36E27ADDFA800E01463 /* TodosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767E36D27ADDFA800E01463 /* TodosTests.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0715044027B1EE0F002D2306 /* Store+Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+Caching.swift"; sourceTree = "<group>"; };
 		0767E35927ADDFA700E01463 /* Todos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0767E35C27ADDFA700E01463 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		0767E36027ADDFA800E01463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				0767E35C27ADDFA700E01463 /* App.swift */,
+				0715044027B1EE0F002D2306 /* Store+Caching.swift */,
 				0767E36027ADDFA800E01463 /* Assets.xcassets */,
 				07C6EC5527B16F8C00F9F248 /* Todo */,
 				07C6EC5C27B1704400F9F248 /* Todos */,
@@ -287,6 +290,7 @@
 				07C6EC5927B16FBF00F9F248 /* TodoView.swift in Sources */,
 				07C6EC5727B16F9500F9F248 /* TodoModel.swift in Sources */,
 				07C6EC6027B1709500F9F248 /* TodosLogic.swift in Sources */,
+				0715044127B1EE0F002D2306 /* Store+Caching.swift in Sources */,
 				07C6EC5E27B1705700F9F248 /* TodosModel.swift in Sources */,
 				0767E35D27ADDFA700E01463 /* App.swift in Sources */,
 				07C6EC4F27B12D3F00F9F248 /* TodosView.swift in Sources */,

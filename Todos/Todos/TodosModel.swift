@@ -1,7 +1,7 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct TodosState: Equatable {
+struct TodosState: Equatable, Codable {
   var editMode: EditMode = .inactive
   var filter: TodosFilter = .all
   var todos: IdentifiedArrayOf<Todo> = []
@@ -28,9 +28,14 @@ struct TodosState: Equatable {
   var canDeleteAll: Bool {
     return !todos.isEmpty && editMode == .active
   }
+
+  enum CodingKeys: String, CodingKey {
+    case filter
+    case todos
+  }
 }
 
-enum TodosFilter: LocalizedStringKey, CaseIterable, Hashable {
+enum TodosFilter: LocalizedStringKey, CaseIterable, Hashable, Codable {
   case all = "All"
   case active = "Active"
   case completed = "Completed"

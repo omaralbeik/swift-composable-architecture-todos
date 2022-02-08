@@ -1,6 +1,6 @@
 import Foundation
 
-struct Todo: Equatable, Identifiable, Comparable {
+struct Todo: Equatable, Identifiable, Comparable, Codable {
   var id: UUID
   var description = ""
   var isComplete = false
