@@ -71,7 +71,7 @@ let todosReducer = Reducer<TodosState, TodosAction, TodosEnvironment>.combine(
     case .todo(let id, action: .checkBoxToggled):
       struct TodoCompletionId: Hashable {}
       return Effect(value: .sortCompletedTodos)
-        .debounce(id: TodoCompletionId(), for: 1, scheduler: env.scheduler)
+        .debounce(id: TodoCompletionId(), for: 1, scheduler: env.scheduler.animation())
 
     case .todo:
       return .none

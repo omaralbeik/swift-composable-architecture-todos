@@ -9,3 +9,11 @@ struct Todo: Equatable, Identifiable, Comparable, Codable {
     return !lhs.isComplete && rhs.isComplete
   }
 }
+
+extension Todo {
+  static let placeholders: [Self] = [
+    .init(id: .init()),
+    .init(id: .init(), description: "Buy milk", isComplete: false),
+    .init(id: .init(), description: "Call Mom", isComplete: true),
+  ]
+}

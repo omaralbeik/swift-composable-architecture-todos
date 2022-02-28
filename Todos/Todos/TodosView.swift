@@ -4,7 +4,12 @@ import SwiftUI
 
 struct TodosView: View {
   let store: Store<TodosState, TodosAction>
-  @ObservedObject var viewStore: ViewStore<TodosState, TodosAction>
+
+  @ObservedObject
+  private var viewStore: ViewStore<TodosState, TodosAction>
+
+  @Environment(\.onboardingStep)
+  private var onboardingStep
 
   init(store: Store<TodosState, TodosAction>) {
     self.store = store
@@ -27,6 +32,8 @@ struct TodosView: View {
         }
         .pickerStyle(.segmented)
         .padding(.horizontal)
+        .redactable()
+        .unredacted(if: onboardingStep == .filters)
 
         if viewStore.todos.isEmpty {
           VStack(spacing: 16) {
@@ -45,18 +52,21 @@ struct TodosView: View {
               store.scope(state: \.filteredTodos, action: TodosAction.todo),
               content: TodoView.init
             )
-            .onDelete { viewStore.send(.delete($0)) }
-            .onMove { viewStore.send(.move($0, $1)) }
+              .onDelete { viewStore.send(.delete($0)) }
+              .onMove { viewStore.send(.move($0, $1)) }
+              .deleteDisabled(onboardingStep != nil)
+              .moveDisabled(onboardingStep != nil)
+              .redactable()
           }
-          
+          .unredacted(if: onboardingStep == .todos)
         }
       }
-      .navigationTitle("Todos")
       .toolbar {
         ToolbarItemGroup(placement: .navigationBarLeading) {
           if viewStore.canEdit {
             EditButton()
               .accessibilityHint(Text("Edit todos"))
+              .redactable()
           }
         }
 
@@ -66,6 +76,7 @@ struct TodosView: View {
               viewStore.send(.deleteAllTapped, animation: .default)
             }
             .foregroundColor(.red)
+            .redactable()
           }
 
           if viewStore.canClearCompleted {
@@ -73,19 +84,35 @@ struct TodosView: View {
               Image(systemName: "strikethrough")
             }
             .accessibility(label: Text("Clear completed"))
+            .redactable()
           }
 
           Button(action: { viewStore.send(.addTodoButtonTapped, animation: .default) }) {
             Image(systemName: "plus")
           }
           .accessibility(label: Text("Add todo"))
+          .redactable()
+          .unredacted(if: onboardingStep == .actions)
         }
       }
       .environment(
         \.editMode,
          viewStore.binding(get: \.editMode, send: TodosAction.editModeChanged)
       )
+      .navigationTitle("Todos")
     }
     .navigationViewStyle(.stack)
+  }
+}
+
+struct TodosView_Previews: PreviewProvider {
+  static var previews: some View {
+    Group {
+      TodosView(store: .init(
+        initialState: .placeholder,
+          reducer: todosReducer,
+          environment: .init(scheduler: .main.eraseToAnyScheduler(), uuid: UUID.init)
+      ))
+    }
   }
 }

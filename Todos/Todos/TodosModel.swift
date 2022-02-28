@@ -39,3 +39,15 @@ enum TodosFilter: LocalizedStringKey, CaseIterable, Hashable, Codable {
   case active = "Active"
   case completed = "Completed"
 }
+
+extension TodosState {
+  static let placeholder = Self(
+    editMode: .inactive,
+    filter: .all,
+    todos: [
+      .init(id: .init(), description: "Buy milk", isComplete: false),
+      .init(id: .init(), description: "Organize desk", isComplete: false),
+      .init(id: .init(), description: "Call Mom", isComplete: true),
+    ]
+  )
+}

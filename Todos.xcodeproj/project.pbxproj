@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0715044127B1EE0F002D2306 /* Store+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715044027B1EE0F002D2306 /* Store+Caching.swift */; };
+		075479C827CAE405009E55E8 /* OnbardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075479C727CAE405009E55E8 /* OnbardingView.swift */; };
+		075479CA27CAF5A3009E55E8 /* OnboardingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075479C927CAF5A3009E55E8 /* OnboardingLogic.swift */; };
+		075479CC27CAF5F2009E55E8 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075479CB27CAF5F2009E55E8 /* OnboardingModel.swift */; };
 		0767E35D27ADDFA700E01463 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767E35C27ADDFA700E01463 /* App.swift */; };
 		0767E36127ADDFA800E01463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0767E36027ADDFA800E01463 /* Assets.xcassets */; };
 		0767E36E27ADDFA800E01463 /* TodosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767E36D27ADDFA800E01463 /* TodosTests.swift */; };
@@ -20,7 +23,9 @@
 		07C6EC5B27B16FEF00F9F248 /* TodoLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6EC5A27B16FEF00F9F248 /* TodoLogic.swift */; };
 		07C6EC5E27B1705700F9F248 /* TodosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6EC5D27B1705700F9F248 /* TodosModel.swift */; };
 		07C6EC6027B1709500F9F248 /* TodosLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6EC5F27B1709500F9F248 /* TodosLogic.swift */; };
+		07DE293F27CBE2C400328E9D /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE293E27CBE2C400328E9D /* TestUtils.swift */; };
 		07E8336127B2840100961D74 /* CachingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8336027B2840100961D74 /* CachingTests.swift */; };
+		07EF3DA227CBE0D400A7EC3D /* OnboardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EF3DA127CBE0D400A7EC3D /* OnboardingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,9 @@
 
 /* Begin PBXFileReference section */
 		0715044027B1EE0F002D2306 /* Store+Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+Caching.swift"; sourceTree = "<group>"; };
+		075479C727CAE405009E55E8 /* OnbardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbardingView.swift; sourceTree = "<group>"; };
+		075479C927CAF5A3009E55E8 /* OnboardingLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLogic.swift; sourceTree = "<group>"; };
+		075479CB27CAF5F2009E55E8 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		0767E35927ADDFA700E01463 /* Todos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0767E35C27ADDFA700E01463 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		0767E36027ADDFA800E01463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +64,9 @@
 		07C6EC5A27B16FEF00F9F248 /* TodoLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoLogic.swift; sourceTree = "<group>"; };
 		07C6EC5D27B1705700F9F248 /* TodosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosModel.swift; sourceTree = "<group>"; };
 		07C6EC5F27B1709500F9F248 /* TodosLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosLogic.swift; sourceTree = "<group>"; };
+		07DE293E27CBE2C400328E9D /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		07E8336027B2840100961D74 /* CachingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingTests.swift; sourceTree = "<group>"; };
+		07EF3DA127CBE0D400A7EC3D /* OnboardingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075479C627CAE3F5009E55E8 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				075479C927CAF5A3009E55E8 /* OnboardingLogic.swift */,
+				075479CB27CAF5F2009E55E8 /* OnboardingModel.swift */,
+				075479C727CAE405009E55E8 /* OnbardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		0767E35027ADDFA700E01463 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +131,7 @@
 				0767E35C27ADDFA700E01463 /* App.swift */,
 				0715044027B1EE0F002D2306 /* Store+Caching.swift */,
 				0767E36027ADDFA800E01463 /* Assets.xcassets */,
+				075479C627CAE3F5009E55E8 /* Onboarding */,
 				07C6EC5527B16F8C00F9F248 /* Todo */,
 				07C6EC5C27B1704400F9F248 /* Todos */,
 			);
@@ -122,6 +143,8 @@
 			children = (
 				0767E36D27ADDFA800E01463 /* TodosTests.swift */,
 				07E8336027B2840100961D74 /* CachingTests.swift */,
+				07EF3DA127CBE0D400A7EC3D /* OnboardingTests.swift */,
+				07DE293E27CBE2C400328E9D /* TestUtils.swift */,
 			);
 			path = TodosTests;
 			sourceTree = "<group>";
@@ -192,6 +215,8 @@
 				0767E36B27ADDFA800E01463 /* PBXTargetDependency */,
 			);
 			name = TodosTests;
+			packageProductDependencies = (
+			);
 			productName = TodosTests;
 			productReference = 0767E36927ADDFA800E01463 /* TodosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -291,11 +316,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C6EC5927B16FBF00F9F248 /* TodoView.swift in Sources */,
+				075479C827CAE405009E55E8 /* OnbardingView.swift in Sources */,
 				07C6EC5727B16F9500F9F248 /* TodoModel.swift in Sources */,
+				075479CC27CAF5F2009E55E8 /* OnboardingModel.swift in Sources */,
 				07C6EC6027B1709500F9F248 /* TodosLogic.swift in Sources */,
 				0715044127B1EE0F002D2306 /* Store+Caching.swift in Sources */,
 				07C6EC5E27B1705700F9F248 /* TodosModel.swift in Sources */,
 				0767E35D27ADDFA700E01463 /* App.swift in Sources */,
+				075479CA27CAF5A3009E55E8 /* OnboardingLogic.swift in Sources */,
 				07C6EC4F27B12D3F00F9F248 /* TodosView.swift in Sources */,
 				07C6EC5B27B16FEF00F9F248 /* TodoLogic.swift in Sources */,
 			);
@@ -305,8 +333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EF3DA227CBE0D400A7EC3D /* OnboardingTests.swift in Sources */,
 				0767E36E27ADDFA800E01463 /* TodosTests.swift in Sources */,
 				07E8336127B2840100961D74 /* CachingTests.swift in Sources */,
+				07DE293F27CBE2C400328E9D /* TestUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +494,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -492,6 +523,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
